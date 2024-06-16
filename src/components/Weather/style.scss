@@ -1,0 +1,114 @@
+@import "../../mixins.scss";
+
+.weather-container {
+  min-height: 100vh;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 30px;
+
+  h1 {
+    color: white;
+  }
+
+  .weather-list-container {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .data-container {
+      min-height: 180px;
+      background-color: var(--bg);
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px skyblue;
+      width: 80%;
+      @include md {
+        width: 300px;
+      }
+      h2 {
+        color: crimson;
+      }
+      p {
+        color: var(--textColor);
+      }
+      @media screen and (min-width: 768px) {
+        width: 400px;
+      }
+    }
+  }
+
+  .form-container {
+    @media screen and (min-width: 768px) {
+      width: 400px;
+    }
+
+    display: flex;
+    align-items: center;
+    width: 300px;
+
+    input {
+      border: none;
+      height: 40px;
+      padding: 10px;
+      width: 80%;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      outline: none;
+      background-color: var(--bg);
+      color: var(--textColor);
+
+      &:focus {
+        border: 2px solid crimson;
+      }
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20%;
+      background-color: crimson;
+      border: none;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      color: white;
+      height: 40px;
+      svg {
+        font-size: 30px;
+      }
+    }
+  }
+  .note {
+    h4 {
+      color: crimson;
+      font-size: 20px;
+    }
+    gap: 10px;
+    .cross {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      &:hover {
+        color: crimson;
+      }
+    }
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--bg);
+    color: var(--softTextColor);
+  }
+}

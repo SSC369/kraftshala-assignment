@@ -1,0 +1,10 @@
+@import "../../mixins.scss";
+
+.toggle-container {
+  align-self: flex-end;
+  margin: 20px;
+  svg {
+    font-size: 100px;
+    cursor: pointer;
+  }
+}
